@@ -1,0 +1,60 @@
+"use strict";
+
+const userId = {
+    name: null,
+    identify: null,
+    Image: null,
+    menssage: null,
+    date: null
+}
+
+const userComment = document.querySelector(".usercomment");
+const publishBtn = document.querySelector("#publish");
+const coments = document.querySelector(".coments");
+const userName = document.querySelector(".user");
+
+userComment.addEventListener("input", e => {
+    if(!userComment.value) {
+        publishBtn.setAttribute("disabled", "disabled");
+        publishBtn.classList.remove("abled")
+    }else{
+        publishBtn.removeAttribute("disabled");
+        publishBtn.classList.add("abled")
+    }
+})
+
+
+function addPost(){
+    console.log("The button Works")
+    if(!userComment.value) return;
+    userId.name = userName.value;
+    if(userId.name === "Anonymous") {
+        userId.identify = false;
+        userId.image = "anonymous.png";
+    }else{
+        userId.identify = true;
+        userId.image ="user.png"
+    }
+
+    userId.menssage = userComment.value;
+    userId.date = new Date().toLocaleString();
+    let published =
+    `<div class="parents">
+        <img src="assets/imagens/perfil.jpg">
+        <div>
+            <h1>${userId.name}</h1>
+            <p>${userId.menssage}</p>
+            <div class="engagements"><img src="img/star.png"><img src="img/heart_838680.png"></div>
+            <span class="date">${userId.date}</span>
+        </div>
+     </div>`;
+
+
+     coments.innerHTML += published;
+     userComment.value = "";
+
+     let comentsNum = document.querySelectorAll(".parents").length;
+     document.getElementById("coments").textContent = comentsNum;
+}
+
+publishBtn.addEventListener("click", addPost)
