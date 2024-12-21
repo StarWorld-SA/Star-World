@@ -1,0 +1,233 @@
+@import "global.css";
+
+.bod{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    top: 0;
+    margin-left: 50%;
+}
+.flex-box{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background: #00eeff1c;
+    width: 25%;
+    border-radius: 20px;
+}
+form{
+    position: absolute;
+    width: 300px;
+}
+input{
+    color:white;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 15px 5px rgba(0, 195, 255, 0.445);
+    background: rgb(255, 255, 255);
+
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+    border-radius: 20px;
+    
+}
+input:hover{
+    background: rgb(255, 255, 255);
+    box-shadow: 1px 1px 15px 5px rgba(255, 255, 255, 0.445);
+    color: #ffffff;
+}
+input::placeholder{
+    position: absolute;
+    color: #0077ff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+input[type="text"]{
+    background: url(../img/star.png) no-repeat scroll 7px 7px;
+    background-size: 16px;
+}
+input[type="email"]{
+    background: url(../img/star.png) no-repeat scroll 7px 7px;
+    background-size: 16px;
+}
+input[type="password"]{
+    background: url(../img/star.png) no-repeat scroll 7px 7px;
+    background-size: 16px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+.title{
+    font-size: 16px;
+    color: white;
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+}
+
+button{
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+    border-radius: 20px;
+    background: rgba(58, 57, 57, 0.301);
+}
+button:active{
+    opacity: 0.8;
+}
+button[disabled]{
+    opacity: 0.7;
+}
+.btn[disabled]{
+    opacity: 0.7;
+}
+.btn{
+    background: none;
+    color: rgb(238, 182, 0);
+    font-weight: 1000;
+    border: none;
+    width: 100px;
+    height: 20px;
+    margin-top: -10px;
+}
+.solid{
+    background: rgb(0, 153, 255);
+    border: none;
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 15px 5px rgba(0, 195, 255, 0.445);
+}
+
+.clear{
+    position: absolute;
+    background: rgb(255, 230, 0);
+    border: none;
+    color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 10px 5px rgba(255, 238, 1, 0.445);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+}
+
+
+.ajuda{
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    width: 100hw;
+    color: white;
+    justify-content: center;
+}
+.ajuda a{
+    color: #e7d001;
+    text-decoration: none;
+}
+.error{
+    color: rgb(255, 0, 0);
+    background: none; 
+    display: none;
+    border-radius: 10px;
+    font-weight: 1000;
+ }
+
+
+
+/*************************play move inicio*******/
+
+.play-movie{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 42%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes animate{
+    0%{
+        box-shadow: 0 0 0 0 rgba(255, 230, 3, 0.205);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 rgb(255, 193, 7, 0);
+    }
+}
+
+/*************************play move Fim*******/
+
+/*************************INICIO DICA*******/
+.dica{
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    width: 28%;
+    margin-top: 32%;
+    color: yellow;
+    left: 490px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dica h1{
+    color: yellow;
+    font-size: 40px;
+    font-weight: 1000;
+}
+/*************************INICIO FIM*******/
+
+
+/*copiright*/
+.copyright {
+    width: 100vw;
+    position: absolute;
+    bottom: 2px;
+
+   
+    color: var(--black-color);
+}
+.copyright p{
+    font-size: 15px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright p img{
+    width: 15px;
+    height: 15px;
+}
+.copyright p a{
+    color: #0193e7;
+    text-decoration: none;
+}
+.copyright p a:hover{
+    color: #a0d1ee;
+}
+
+
+

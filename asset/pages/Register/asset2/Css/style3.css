@@ -1,0 +1,293 @@
+::placeholder{
+    font-size: 12px;
+}
+bod{
+    min-height: 100vh;
+    top:0;
+    position: fixed;
+}
+
+::selection{
+    color: #fff;
+    background: #2192EE;
+}
+.total-space{
+    background: transparent;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+    
+}
+
+.total-space header{
+    font-size: 30px;
+    font-weight: 1000;
+    color: #0084ff;
+    position: fixed;
+    background: transparent;
+    width: 100%;
+    height: 35%;
+    z-index: 999;
+    top: 0;
+    padding-top: 2%;
+    
+}
+.container2{
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    bottom: 0;
+    margin-bottom: 5%;
+    height: 75%;
+    top: 0;
+    margin-top: 10%;
+}
+.container2::-webkit-scrollbar{
+    width: 0px;
+}
+
+.container .form-outer{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.form-outer form .page{
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+.title{
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffd900;
+    margin-top: 50px;
+    justify-content: center;
+    display: flex;
+}
+label{
+    position: absolute;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    justify-content: right;
+    right: 0;
+    top: 0;
+    margin-top: -12px;
+    margin-right: 80px;
+}
+.form-outer form .page .field{
+    width: 400px;
+    height: 50px;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form .page .field .label{
+    top: -30px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form .page .field input{
+    height: 60%;
+    width: 70%;
+    border: 1px solid lightgray;
+    border-radius: 40px;
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    box-shadow: 1px 1px 15px 5px rgba(0, 195, 255, 0.445);
+    border: none;
+    outline: none;
+    background:white;
+}
+input:hover{
+    background: rgb(255, 255, 255);
+    box-shadow: 1px 1px 15px 5px rgba(255, 255, 255, 0.445);
+    color: #000000;
+}
+input::placeholder{
+    position: absolute;
+    color: #0077ff;
+    display: flex;
+    justify-content: center;
+}
+
+form .page .field .genero{
+    font-size: 28px;
+}
+form .page .field select{
+    height: 60%;
+    width: 60%;
+    border: 1px solid lightgray;
+    border-radius: 40px;
+    padding-left: 15px;
+    font-size: 14px;
+}
+form .page .btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input, button{
+    padding: 10px;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+    border-radius: 20px;
+    background: rgba(58, 57, 57, 0.301);
+}
+button{
+    cursor: pointer;
+}
+button:active{
+    opacity: 0.8;
+}
+button[disabled]{
+    opacity: 0.7;
+}
+.btn[disabled]{
+    opacity: 0.7;
+}
+.btn{
+    background: none;
+    color: rgb(238, 182, 0);
+    font-weight: 1000;
+    border: none;
+    width: 100px;
+    height: 20px;
+    margin-top: -10px;
+}
+.solid{
+    background: rgb(0, 153, 255);
+    border: none;
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 15px 5px rgba(255, 230, 0, 0.445);
+}
+form .page .field button{
+    width: 40%;
+    height: 60%;
+    border: none;
+    background: #ffe600;
+    margin-top: -20px;
+    border-radius: 40px;
+    color: #0077ff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    position: absolute;
+    z-index: 99999999;
+    width: 100%;
+    height: 6%;
+    bottom: 0;
+    background: transparent;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+footer a{
+    text-decoration:none;
+    color: #2192EE;
+}
+.error{
+    color: rgb(255, 0, 0);
+    background: none; 
+    display: none;
+    border-radius: 10px;
+    font-weight: 1000;
+ }
+
+/**************************botão enter inicio***************/
+.enter{
+    z-index: 999999999;
+    top: 0;
+    left: 0;
+    margin-top: 15px;
+    margin-left: 10px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #ffffff;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 1px 1px 15px 5px rgba(255, 255, 255, 0.445);
+}
+
+.enter:hover{
+    background: #212fee;
+}
+.enter img{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+}
+.enter img:hover{
+    width: 28px;
+    height: 28px;
+}
+/**************************botão enter fim***************/
+
+
+ /*************************play move inicio*******/
+
+.play-movie{
+    position: absolute;
+    margin-top: 80px;
+    margin-left: -1.5%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes animate{
+    0%{
+        box-shadow: 0 0 0 0 rgba(0, 195, 255, 0.7);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 rgb(255, 193, 7, 0);
+    }
+}
+
+/*************************play move Fim*******/
+

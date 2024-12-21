@@ -1,0 +1,97 @@
+@import "global.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: url("../img/pngwing.com\ \(3\).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bolhas, .bolhas2, .bolhas3{
+    position: absolute;
+    display: flex;
+}
+.bolhas3{
+    position: absolute;
+    display: block;
+}
+.bolhas span{
+    width: 30px;
+    height: 30px;
+    background: url(../img/star5.png);
+    background-color: #f0a400e0;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #fff12d44,
+    0 0 50px #f1ff2d,
+    0 0 100px #ffc72d;
+    animation: animar 15s linear infinite;
+    animation: animar calc(400s / var(--i)) linear infinite;
+}
+.bolhas2 span{
+    width: 30px;
+    height: 30px;
+    background: url(../img/star5.png);
+    background-color: #f0a400e0;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #fff12d44,
+    0 0 50px #f1ff2d,
+    0 0 100px #ffc72d;
+    animation: animar 15s linear infinite;
+    animation: animar calc(400s / var(--i)) linear infinite;
+    position: absolute;
+}
+.bolhas3 span{
+    width: 30px;
+    height: 30px;
+    background: url(../img/star5.png);
+    background-color: #f0a400e0;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #fff12d44,
+    0 0 50px #f1ff2d,
+    0 0 100px #ffc72d;
+    animation: animar 15s linear infinite;
+    animation: animar calc(400s / var(--i)) linear infinite;
+    position: absolute;
+    right: 0;
+}
+@keyframes animar{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+.bolhas span:nth-last-of-type(even){
+    background: url(../img/star5.png);
+    background-color: #f0a400e0;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center;
+    box-shadow: 0 0 0 10px #fffb2d44,
+    0 0 50px #e7e981,
+    0 0 100px #d4c10f;
+}
