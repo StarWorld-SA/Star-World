@@ -1,0 +1,445 @@
+:root{
+    --primary : linear-gradient(to bottom right, #0a0057, #3f00ee);
+    --secondary : gold;
+    --text : #fff;
+}
+.contain{
+    width: 100vw;
+    margin-top: -10%;
+    display: grid;
+    grid-template-columns: 2.8fr 1.2fr;
+    gap: 1rem;
+
+    padding: 1.5rem 6rem;
+    text-transform: capitalize;
+}
+@media screen and (max-width: 990px){
+    .contain{
+        grid-template-columns: 1fr;
+    }
+}
+.main-video, .video-playlist{
+    width: 100%;
+    height: 30rem;
+}
+.main-video .title{
+    margin-top: 1rem;
+    color: var(--black-color);
+}
+.video-playlist .title{
+    padding-left: 1rem;
+}
+.video-playlist > p{
+    padding: 1rem;
+    color: var(--secondary);
+}
+.video-playlist .videos{
+    height: 70%;
+    overflow-y: auto;
+}
+.video-playlist .videos::-webkit-scrollbar{
+    width: .4rem;
+    border-radius: .4rem;
+    background-color: #0005;
+}
+.video-playlist .videos::-webkit-scrollbar-thumb{
+    border-radius: .4rem;
+    background-color: #fff;
+}
+.video-playlist .videos .video{
+    position: relative;
+    width: 100%;
+    height: 4rem;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 1rem;
+    margin-top: .1rem;
+    cursor: pointer;
+
+    border-radius: .5rem;
+}
+.video-playlist .videos .video:hover{
+    background-color: #0003;
+}
+.video-playlist .videos .video.active{
+    background-color: #0003;
+    color: var(--secondary);
+}
+.main-video video{
+    width: 100%;
+    border-radius: .5rem;
+}
+.videos img{
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+
+    filter: invert(100%);
+}
+.video-playlist .videos .video.active img{
+    filter: invert(100%) sepia(100%) saturate(2000%) hue-rotate(360deg);
+}
+.video p{
+    margin-left: 2.5rem;
+}
+.video h3{
+    width: 23rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font: 100 1rem sans-serif;
+    padding: 0 .5rem;
+}
+
+
+
+
+
+
+
+/*================MODAL  PLAY MUVE FIM========*/
+/*   -------------janela modal do play inicio-------------------*/
+.janela-modalplay-move{
+    width: 79vw;
+    height: 100vh;
+    position: fixed;
+    top: 40px;
+    right: 0;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    z-index: 99;
+    overflow: scroll;
+    display: none;
+}
+.janela-modalplay-move::-webkit-scrollbar{
+    width: 3px;
+    color: #3f00ee;
+    background: #000000;
+}
+.modalplay-move{
+    position: absolute;
+    width: 50%;
+    height: 45%;
+  
+    backdrop-filter: blur(10px);
+    padding: 4px;
+    top: 0;
+    margin-top: -50px;
+    left: -90px;
+}
+.modalplay-move .spaceplay{
+    margin-top: 9%;
+    width: 50%;
+    height: 100%;
+    bottom: 0;
+    flex-basis: 58%;
+}
+
+.modalplay-move .spaceplay .contain .divulg{
+    position: absolute;
+    top: 0;
+    margin-top: 68%;
+    width: 80%;
+    height: 10%;
+    margin-left: 18%;
+}
+.modalplay-move .spaceplay .contain .divulg2{
+    position: absolute;
+    top: 0;
+    margin-top: 85%;
+    width: 50%;
+    height: 10%;
+    margin-left: 138%;
+}
+.contain .main-video{
+    width: 100%;
+    height: 160%;
+    border-radius: 10px;
+}
+.contain .main-video img{
+    width: 160%;
+    height: 140%;
+    border-radius: 10px;
+    padding: 4px;
+}
+/*play movie btn*/
+
+.modalplay-move .spaceplay .contain .play-moviess{
+    position: absolute;
+    top: 0;
+    margin-top: 35%;
+    margin-left: 96%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animatemove 2s linear infinite;
+    box-shadow: 30px var(--color-primary);
+}
+
+@keyframes animatemove{
+    0%{
+        box-shadow: 0 0 0 0 rgb(255, 180, 58, 0.7);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 rgb(255, 193, 7, 0);
+    }
+}
+.play-moviess .cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    
+
+    background: var(--color-primary);
+
+    border-radius: 40px;
+
+} 
+.play-moviess .cont img{
+    width: 40px;
+    height: 40px;
+    border: none;
+    box-shadow: none;
+    border-radius: none;
+    cursor: pointer;
+}
+
+
+/*********************/
+/******viveo container inicio***/
+.video-container{
+    position: fixed;
+    top: 0;
+    right: -130%;
+    align-items: center;
+    justify-content: center;
+    width: 220%;
+    height: 100vh;
+    background: var(--color-light);
+    z-index: 999999999999999999;
+    display: none;
+}
+.video-container.show-video{
+    display: flex;
+}
+.video-box{
+    position: relative;
+    width: 90%;
+    height: 60%;
+    margin-left: 45px;
+    margin-top: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.video-box #myvideo{
+    width: 90%;
+    aspect-ratio: 16/8;
+    border-radius: 40px;
+    height: 100%;
+}
+.close-video{
+    position: absolute;
+    padding: 0px 10px;
+    top: -4px;
+    right: 63.4rem;
+    font-size: 40px;
+    color: var(--color-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    z-index: 99999999999999999999999999999999999999999999999999999999;
+}
+/******viveo container fim***/
+
+.divulg2{
+    position: absolute;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 4%;
+}
+.divulg2 .viwss{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: var(--color-dark);
+    font-size: 14px;
+    background: var(--color-primary);
+    margin-left: 4px;
+    border-radius: 40px;
+} 
+.divulg2 .viwss img{
+    width: 20px;
+    height: 20px;
+    border: none;
+    box-shadow: none;
+    border-radius: none;
+}
+.divulg2 .viwss p{
+    margin-left: 5px;
+    color: var(--black-color);
+}
+.divulg2 .viwss .parthover{
+    position: absolute;
+    background: var(--color-gray);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: var(--color-dark);
+    font-size: 14px;
+    margin-top: -8%;
+    border-radius: 40px;
+    cursor: pointer;
+    display: none;
+}
+.divulg2 .viwss .starhover{
+    position: absolute;
+    background: var(--color-gray);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    color: var(--color-white);
+    font-size: 14px;
+    margin-top: -8.1%;
+    border-radius: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.modalplay-move .spaceplay .contain .main-video{
+    width: 80%;
+    height: 60%;
+}
+.modalplay-move .spaceplay .contain .main-video .title{
+    margin-left: 40px;
+    margin-top: 6px;
+    font-size: 25px;
+}
+.modalplay-move img{
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    cursor: default;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--black-color);
+}
+
+.modalplay-move .spaceplay .go-to-back{
+    position: absolute;
+    top: 17.5%;
+    left: 100px;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    background: none;
+    cursor: pointer;
+    transition: .9s;
+    height: 30px;
+    width: 30px;
+    color: var(--color-dark);
+    background-color: var(--color-gray);
+}
+.modalplay-move .spaceplay .go-to-back #go-to-back{
+    border-radius: 50%;
+    cursor: pointer;
+}
+.modalplay-move .spaceplay .go-to-back:hover{
+    opacity: 10px;
+    background-color: var(--color-primary);
+}
+
+.modalplay-move .spaceplay .image-cartaz{
+    position: absolute;
+    top: 32%;
+    right: -104%;
+    border: none;
+    border-radius: 6px;
+    font-size: 30px;
+    display: flex;
+    transition: .9s;
+    height: 120%;
+    width: 45%;
+    color: var(--white-color);
+    background-color: var(--color-gray);
+    z-index: 9999999999999999999999999999999999999999999999999999;
+}
+.modalplay-move .spaceplay .image-cartaz img{
+    cursor: pointer;
+    border: 2px solid var(--color-primary);
+}
+
+.janela-modalplay-move.abrir{
+    display: flex;
+}
+@keyframes abrirmodalplay{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.abrir .modalplay{
+    animation: abrirmodal 0.5s;
+}
+.modalplay-move .spaceplay .contain .descricao{
+
+    position: absolute;
+    top: 0;
+    margin-top: 78%;
+    left: 0;
+    margin-left: 24%;
+    width: 110%;
+    height: 100%;
+    text-align: center;
+}
+.modalplay-move .spaceplay .contain .actores{
+
+    position: absolute;
+    top: 0;
+    margin-top: 160%;
+    left: 0;
+    margin-left: 28%;
+    width: 100%;
+    height: auto;
+}
+
+/*   -------------janela modal do play fim-------------------*/
+/*================MODAL  PLAY MUVE INICIO========*/
